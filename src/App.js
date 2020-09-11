@@ -14,8 +14,7 @@ class App extends Component {
 
   state = {}
 
-
-// handleItemClick = (e, { name }) => {this.setState({ activeItem: name});}
+  chonMenu = (e, { name }) => {this.setState({ dangChonGi: name});}
 
   render() {
     const { activeItem } = this.state
@@ -29,40 +28,44 @@ class App extends Component {
                 as={Link}
                 to="/"
                 name='Home'
-                active={activeItem === 'Home'}
-                // onClick={this.handleItemClick}
+                // active={activeItem === 'Home'}
+                active={this.state.dangChonGi === 'Home'}
+                onClick={this.chonMenu}
               ></Menu.Item>
             <Menu.Item
               as={Link}
               to="/EvaUnit"
               name='EvaUnit'
-              active={activeItem === 'EvaUnit'}
-              // onClick={this.handleItemClick}
+              // active={activeItem === 'EvaUnit'}
+              active={this.state.dangChonGi === 'EvaUnit'}
+              onClick={this.chonMenu}
             ></Menu.Item>
             <Menu.Item
               as={Link}
               to="/Angel"
               name='Angel'
-              active={activeItem === 'Angel'}
-              // onClick={this.handleItemClick}
+              // active={activeItem === 'Angel'}
+              active={this.state.dangChonGi === 'Angel'}
+              onClick={this.chonMenu}
             ></Menu.Item>
             <Menu.Item
               as={Link}
               to="/Pilot"
               name='Pilot'
-              active={activeItem === 'Pilot'}
-              // onClick={this.handleItemClick}
+              // active={activeItem === 'Pilot'}
+              active={this.state.dangChonGi === 'Pilot'}
+              onClick={this.chonMenu}
             ></Menu.Item>
             <Menu.Item
               as={Link}
               to="/People"
               name='People'
-              active={activeItem === 'People'}
-              // onClick={this.handleItemClick}
+              // active={activeItem === 'People'}
+              active={this.state.dangChonGi === 'People'}
+              onClick={this.chonMenu}
             ></Menu.Item>
             
-        </Menu>
-
+          </Menu>
 
           <Route exact path = "/"  component = {Home} />
           <Route path = "/EvaUnit" component = {EvaUnit} />
@@ -70,7 +73,6 @@ class App extends Component {
           <Route path = "/Pilot" component = {Pilot} />
           <Route path = "/People" component = {People} />
 
-          
         </div>
 
       </Router>    
