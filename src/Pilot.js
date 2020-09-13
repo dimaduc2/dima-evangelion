@@ -28,7 +28,7 @@ class Pilot extends Component {
 
   xoa(id){
     // alert('xóa ' + id)
-    axios.get('http://192.168.1.20:5000/eva/xoa?id=' + id)
+    axios.get('http://192.168.1.20:5000/eva/pilots/xoa?id=' + id)
     .then(response => {
       this.setState({ketQuaPilot: response.data});
     })

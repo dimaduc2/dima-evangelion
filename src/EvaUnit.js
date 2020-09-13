@@ -26,7 +26,7 @@ class EvaUnit extends Component {
 
   xoa(id){
     // alert('xóa ' + id)
-    axios.get('http://192.168.1.20:5000/eva/xoa?id=' + id)
+    axios.get('http://192.168.1.20:5000/eva/eva_units/xoa?id=' + id)
     .then(response => {
       this.setState({ketQuaEvaUnit: response.data});
     })

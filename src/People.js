@@ -27,7 +27,7 @@ class People extends Component {
 
   xoa(id){
     // alert('xóa ' + id)
-    axios.get('http://192.168.1.20:5000/eva/xoa?id=' + id)
+    axios.get('http://192.168.1.20:5000/eva/people/xoa?id=' + id)
     .then(response => {
       this.setState({ketQuaPeople: response.data});
     })
